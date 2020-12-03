@@ -22,7 +22,6 @@ import java.util.stream.Collectors;
  * @author Lucas Koch
  */
 @AllArgsConstructor
-@NoArgsConstructor
 @Service
 public class InvoiceListProcessor implements InvoiceListService {
 

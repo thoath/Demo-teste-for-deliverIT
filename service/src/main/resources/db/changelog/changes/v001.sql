@@ -1,9 +1,9 @@
 CREATE TABLE INVOICE (
     id bigserial NOT NULL,
-	name varchar(255) NULL,
-	amount DECIMAL NULL,
-	due_date timestamp NULL,
-	payment_date timestamp NULL,
+	name varchar(255) NOT NULL,
+	amount DECIMAL NOT NULL,
+	due_date timestamp NOT NULL,
+	payment_date timestamp NOT NULL,
 	CONSTRAINT invoice_pkey PRIMARY KEY (id)
 );
 

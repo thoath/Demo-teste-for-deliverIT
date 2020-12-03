@@ -3,8 +3,7 @@ package br.com.deliverit.service.processor;
 import br.com.deliverit.model.entity.Invoice;
 import br.com.deliverit.model.repository.InvoiceRepository;
 import br.com.deliverit.service.service.InvoiceRegistryService;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -12,10 +11,9 @@ import org.springframework.stereotype.Service;
  * @author Lucas Koch
  */
 @Service
-@AllArgsConstructor
-@NoArgsConstructor
 public class InvoiceRegistry implements InvoiceRegistryService {
 
+    @Autowired
     private InvoiceRepository invoiceRepository;
 
     @Override
