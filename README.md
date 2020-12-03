@@ -32,7 +32,7 @@
 </code>
 - In insomnia register the invoices
 - In insomnia list the invoices and test the output
-
+- If you need to migrate your database, run in root: <code>mvn liquibase:generateChangeLog</code> and use this file to migrate
 ##Business Rules
  - Invoice registry
  - Invoice list with processed data with calculated fields
