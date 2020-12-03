@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd"/>
+    <changeSet author="lucaskoch (generated)" id="1606942594552-1">
+        <createSequence sequenceName="invoice_id_seq"/>
+    </changeSet>
+    <changeSet author="lucaskoch (generated)" id="1606942594552-2">
+        <createSequence sequenceName="payment_rule_id_seq"/>
+    </changeSet>
+    <changeSet author="lucaskoch (generated)" id="1606942594552-3">
+        <createTable tableName="invoice">
+            <column autoIncrement="true" name="id" type="BIGSERIAL">
+                <constraints primaryKey="true" primaryKeyName="invoice_pkey"/>
+            </column>
+            <column name="name" type="VARCHAR(255)"/>
+            <column name="amount" type="numeric"/>
+            <column name="due_date" type="TIMESTAMP(29) WITHOUT TIME ZONE"/>
+            <column name="payment_date" type="TIMESTAMP(29) WITHOUT TIME ZONE"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="lucaskoch (generated)" id="1606942594552-4">
+        <createTable tableName="payment_rule">
+            <column autoIncrement="true" name="id" type="BIGSERIAL">
+                <constraints primaryKey="true" primaryKeyName="payment_rules_pkey"/>
+            </column>
+            <column name="delay_in_days" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="penalty" type="numeric"/>
+            <column name="interest_day" type="numeric"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
