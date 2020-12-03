@@ -32,3 +32,17 @@
 </code>
 - In insomnia register the invoices
 - In insomnia list the invoices and test the output
+
+##Business Rules
+ - Invoice registry
+ - Invoice list with processed data with calculated fields
+ - Rules to payment registry
+ - The fixed amount are not cumulative from daily interests.
+
+## Development Process
+ - TDD
+ - DDD
+ - SOLID
+ - KISS
+ 
+ Thank you and feel free to contribute.
