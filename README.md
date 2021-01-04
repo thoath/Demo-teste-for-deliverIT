@@ -30,16 +30,16 @@
 	"interestDay": 0.2
 }
 </code>
-- In insomnia register the invoices
-- In insomnia list the invoices and test the output
-- If you need to migrate your database, run in root: <code>mvn liquibase:generateChangeLog</code> and use this file to migrate
-##Business Rules
+ - In insomnia register the invoices
+ - In insomnia list the invoices and test the output
+ - If you need to migrate your database, run in root: <code>mvn liquibase:generateChangeLog</code> and use this file to migrate
+ ##Business Rules
  - Invoice registry
  - Invoice list with processed data with calculated fields
  - Rules to payment registry
  - The fixed amount are not cumulative from daily interests.
 
-## Development Process
+ ## Development Process
  - TDD
  - DDD
  - SOLID
