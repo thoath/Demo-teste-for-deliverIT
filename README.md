@@ -1,13 +1,13 @@
 #Simple DeliverIT demo test
 
-##Pre requisites
+## Pre requisites
  - Maven
  - Java 11
  - Docker compose
  - Insomnia/Postman
  - Some database admin like Dbeaver
  
- ##To run the project
+ ## To run the project
  - In root folder, run cmd command: <code>docker-compose up -d</code>
  - In root folder, run cmd command : <code>mvn clean install</code>
  - Configure your application to run the application(i use Intellij)
@@ -33,7 +33,7 @@
  - In insomnia register the invoices
  - In insomnia list the invoices and test the output
  - If you need to migrate your database, run in root: <code>mvn liquibase:generateChangeLog</code> and use this file to migrate
- ##Business Rules
+ ## Business Rules
  - Invoice registry
  - Invoice list with processed data with calculated fields
  - Rules to payment registry
