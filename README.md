@@ -1,4 +1,4 @@
-#Simple DeliverIT demo test
+# Simple DeliverIT demo test
 
 ## Pre requisites
  - Maven
@@ -12,7 +12,7 @@
  - In root folder, run cmd command : <code>mvn clean install</code>
  - Configure your application to run the application(i use Intellij)
  - In insomnia import the json configuration from /doc folder
- - In insomnia, register the rules : 
+ - In insomnia, register the rules :
  <code>
 {
     "delayInDays" : 99999,
@@ -29,7 +29,7 @@
 	"penalty": 3,
 	"interestDay": 0.2
 }
-</code>
+ </code>
  - In insomnia register the invoices
  - In insomnia list the invoices and test the output
  - If you need to migrate your database, run in root: <code>mvn liquibase:generateChangeLog</code> and use this file to migrate
