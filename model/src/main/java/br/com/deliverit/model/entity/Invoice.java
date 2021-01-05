@@ -1,6 +1,7 @@
 package br.com.deliverit.model.entity;
 
 import lombok.*;
+import org.springframework.lang.Nullable;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
@@ -16,6 +17,7 @@ import java.time.LocalDate;
 @Getter
 @Setter
 @Entity
+@EqualsAndHashCode
 public class Invoice implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -39,4 +41,8 @@ public class Invoice implements Serializable {
     @Column
     @NotNull(message = "PaymentDate must be provided. ")
     private LocalDate paymentDate;
+
+    @ManyToOne
+    @JoinColumn(name="payment_rule_id")
+    private PaymentRule paymentRule;
 }

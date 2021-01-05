@@ -19,8 +19,8 @@ public class PaymentRuleRegistry implements PaymentRuleService {
     private PaymentRuleRepository repository;
 
     @Override
-    public void execute(PaymentRule rule) {
-        repository.save(rule);
+    public PaymentRule execute(PaymentRule rule) {
+        return repository.save(rule);
     }
 
     @Override

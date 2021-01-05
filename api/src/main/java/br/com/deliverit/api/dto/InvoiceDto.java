@@ -5,6 +5,7 @@ import lombok.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.UUID;
 
 /**
  * DTO for invoice entity
@@ -20,6 +21,7 @@ public class InvoiceDto implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    private Long id;
     private String name;
     private BigDecimal amount;
     private BigDecimal fixedAmount;

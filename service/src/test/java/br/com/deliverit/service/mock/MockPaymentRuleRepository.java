@@ -135,4 +135,15 @@ public class MockPaymentRuleRepository implements PaymentRuleRepository {
     public <S extends PaymentRule> boolean exists(Example<S> example) {
         return false;
     }
+
+    @Override
+    public Optional<PaymentRule> findByMinDaysLessThanEqualAndMaxDaysGreaterThanEqual(long minDays, long maxDays) {
+
+        Optional<PaymentRule> paymentRule = listPaymentRule
+                .stream()
+                .filter(rule -> rule.getMinDays() <= minDays && rule.getMaxDays() >= maxDays)
+                .findAny();
+
+        return paymentRule;
+    }
 }

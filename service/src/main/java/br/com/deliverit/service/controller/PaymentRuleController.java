@@ -20,8 +20,7 @@ public class PaymentRuleController {
     private PaymentRuleService service;
 
     @PostMapping("/rule")
-    public ResponseEntity registryRule(@RequestBody @Valid PaymentRule paymentRule) {
-        service.execute(paymentRule);
-        return ResponseEntity.status(HttpStatus.CREATED).build();
+    public ResponseEntity<PaymentRule> registryRule(@RequestBody @Valid PaymentRule paymentRule) {
+        return ResponseEntity.status(HttpStatus.CREATED).body(service.execute(paymentRule));
     }
 }

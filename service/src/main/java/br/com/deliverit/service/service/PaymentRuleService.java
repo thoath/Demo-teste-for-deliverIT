@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface PaymentRuleService {
 
-    void execute(PaymentRule rule);
+    PaymentRule execute(PaymentRule rule);
     List<PaymentRule> listRules();
 }

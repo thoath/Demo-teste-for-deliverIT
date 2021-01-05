@@ -3,7 +3,6 @@ package br.com.deliverit.service.controller;
 import br.com.deliverit.model.entity.Invoice;
 import br.com.deliverit.model.repository.InvoiceRepository;
 import br.com.deliverit.model.repository.PaymentRuleRepository;
-import br.com.deliverit.service.controller.InvoiceRegistryController;
 import br.com.deliverit.service.service.InvoiceRegistryService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;

@@ -18,7 +18,7 @@ public final class InvoiceRegistryController {
 
     @PostMapping("/registry")
     public ResponseEntity<Invoice> registryInvoice(@RequestBody @Valid Invoice invoice) {
-        service.execute(invoice);
-        return ResponseEntity.status(HttpStatus.CREATED).build();
+
+        return ResponseEntity.status(HttpStatus.CREATED).body(service.execute(invoice));
     }
 }
