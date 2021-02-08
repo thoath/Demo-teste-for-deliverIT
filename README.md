@@ -1,4 +1,4 @@
-# Simple DeliverIT demo test
+# Simple DeliverIT demo test, module version
 
 ## Pre requisites
  - Maven
